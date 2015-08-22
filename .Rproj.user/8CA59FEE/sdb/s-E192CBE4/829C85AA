@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{NGS.Tools.BICseq-package}\n\\alias{NGS.Tools.BICseq-package}\n\\alias{NGS.Tools.BICseq}\n\\docType{package}\n\\title{\nBIC-seq copy number analysis pipeline.\n}\n\\description{\nGenerate a standard data CNV analysis using BIC-seq as the CNV calling algorithm.\n}\n\\details{\n\\tabular{ll}{\nPackage: \\tab NGS.Tools.BICseq\\cr\nType: \\tab Package\\cr\nVersion: \\tab 0.4\\cr\nDate: \\tab 2015-08-21\\cr\nLicense: \\tab GPL-2\\cr\n}\nget.bicseq.chr run.bicseq.cnv.pipeline\n}\n\\author{\nRichard de Borja\n\nMaintainer: Richard de Borja <richard.deborja@sickkids.ca>\n}\n\\references{\nhttp://compbio.med.harvard.edu/Supplements/PNAS11.html\n}\n\\keyword{ BICseq }\n\\keyword{ copy-number }\n\\keyword{ CNV }\n",
+    "created" : 1440167353081.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1054277528",
+    "id" : "829C85AA",
+    "lastKnownWriteTime" : 1440167385,
+    "path" : "~/local/src/R/NGS.Tools.BICseq/man/NGS.Tools.BICseq-package.Rd",
+    "project_path" : "man/NGS.Tools.BICseq-package.Rd",
+    "properties" : {
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{run.bicseq.cnv.pipeline}\n\\alias{run.bicseq.cnv.pipeline}\n\\title{Run the BIC-seq CNV Analysis Pipeline}\n\\description{Run the BIC-seq CNV analysis pipeline and generate a segmentation file}\n\\usage{\nrun.bicseq.cnv.pipeline(tumour, normal, chr = get.bicseq.chr(), bin = 100, lambda = 2, winSize = 200 , quant = 0.95, mult = 1)\n}\n\\arguments{\n\t\\item{tumour}{BAM file from tumour sample}\n\t\\item{normal}{BAM file from normal sample}\n\t\\item{chr}{character vector containing name of chromosomes to review}\n\t\\item{bin}{initial genomic bin size to use, default: 100}\n\t\\item{lambda}{penalty of the BIC, larger lambda gives a smoother profile, default: 2}\n\t\\item{winSize}{window size for outlier detection, default: 200}\n\t\\item{quant}{the probability of the read count quantile, default: 0.95}\n\t\\item{mult}{positive integer, see BICseq HowTo vignette for details, default: 1}\n}\n\\author{Richard de Borja}\n\\examples{\n# ensure consistent results between runs\nset.seed(12345);\n\n# create a list of potential locations for the datasets\ndata.directories <- paste(.libPaths(), '/NGS.Tools.BICseq', sep = '');\ndata.directories <- c('./', data.directories);\n\n# look in the Rcheck directory to get dataset file\ndata.directories <- c(getwd(), data.directories);\n\n# search all the locations for the normal file\nfile.checks <- file.exists(paste(data.directories, 'extdata/normal_sorted.bam', sep = '/'));\n\n# check to see if the file was actually found\nif (any(file.checks)) {\n\tdata.directory <- data.directories[order(file.checks, decreasing = TRUE)[1]];\n} else {\n\tstop('Unable to find dataset file for processing');\n\t}\nnormal <- paste(data.directory, 'extdata/normal_sorted.bam', sep = '/');\n\n# search all the locations for the normal file\nfile.checks <- file.exists(paste(data.directories, 'extdata/tumor_sorted.bam', sep = '/'));\n\n# check to see if the file was actually found\nif (any(file.checks)) {\n\tdata.directory <- data.directories[order(file.checks, decreasing = TRUE)[1]];\n} else {\n\tstop('Unable to find dataset file for processing');\n\t}\ntumour <- paste(data.directory, 'extdata/tumor_sorted.bam', sep = '/');\n\nbicseq <- run.bicseq.cnv.pipeline(\n\tnormal = normal,\n\ttumour = tumour,\n\tchr = c('chr22')\n\t);\n}\n\\keyword{BICseq}\n",
+    "created" : 1404911971137.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "375033110",
+    "id" : "4487C5C7",
+    "lastKnownWriteTime" : 1404911981,
+    "path" : "~/local/src/R/NGS.Tools.BICseq/man/run.bicseq.cnv.pipeline.Rd",
+    "project_path" : "man/run.bicseq.cnv.pipeline.Rd",
+    "properties" : {
+    },
+    "relative_order" : 0,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

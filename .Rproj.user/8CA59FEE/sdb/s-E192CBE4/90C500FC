@@ -1,0 +1,17 @@
+{
+    "contents" : "get.bicseq.chr <- function(reftype='b37') {\n  valid_reftype = c('b37', 'ucsc')\n  if (! reftype %in% valid_reftype) stop(paste(sep=' ', reftype, 'is an invalid reftype'))\n  if (reftype == 'ucsc') {\n    return(\n      c(\n        'chr1',\n        'chr2',\n        'chr3',\n        'chr4',\n        'chr5',\n        'chr6',\n        'chr7',\n        'chr8',\n        'chr9',\n        'chr10',\n        'chr11',\n        'chr12',\n        'chr13',\n        'chr14',\n        'chr15',\n        'chr16',\n        'chr17',\n        'chr18',\n        'chr19',\n        'chr20',\n        'chr21',\n        'chr22',\n        'chrX',\n        'chrY'\n        )\n      )\n   } else if (reftype == 'b37') {\n    return(\n      c(\n        '1',\n        '2',\n        '3',\n        '4',\n        '5',\n        '6',\n        '7',\n        '8',\n        '9',\n        '10',\n        '11',\n        '12',\n        '13',\n        '14',\n        '15',\n        '16',\n        '17',\n        '18',\n        '19',\n        '20',\n        '21',\n        '22',\n        'X',\n        'Y'\n        )\n      )\n    }\n  }\n",
+    "created" : 1440260896820.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2292290272",
+    "id" : "90C500FC",
+    "lastKnownWriteTime" : 1425182266,
+    "path" : "~/local/src/R/NGS.Tools.BICseq/R/get.bicseq.chr.R",
+    "project_path" : "R/get.bicseq.chr.R",
+    "properties" : {
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

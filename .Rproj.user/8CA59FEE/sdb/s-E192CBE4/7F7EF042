@@ -1,0 +1,18 @@
+{
+    "contents" : "CNA.object <- CNA(cbind(coriell$Coriell.05296), coriell$Chromosome, coriell$Position, data.type = 'logratio', sampleid = 'c05296')\nsmoothed.CNA.object <- smooth.CNA(CNA.object)\nsmoothed.CNA.object\nsegment.smoothed.CNA.object <- segment(smoothed.CNA.object, verbose = 1)\n\nCNA.object <- CNA(cbind(data$seg.summary$read_ratio), data$seg.summary$chrom, as.numeric(data$seg.summary$start), data.type = 'logratio', sampleid = 'B01')\nsegment.CNA.object <- segment(CNA.object, verbose = 1)\nplot(segment.CNA.object, plot.type = 'w')\n\nsmoothed.CNA.object <- smooth.CNA(CNA.object)\nsegment.smoothed.CNA.object <- segment(smoothed.CNA.object, verbose = 1)\n\n\nCNA.object <- CNA(cbind(data$bin$ratio), data$bin$chrom, as.numeric(data$bin$start), data.type = 'binary', sampleid = 'B01')\nsmoothed.CNA.object <- smooth.CNA(CNA.object)\nsegment.smoothed.CNA.object <- segment(smoothed.CNA.object, verbose = 1)\nsegment.CNA.object <- segment(CNA.object, verbose = 1)\nplot(segment.CNA.object, plot.type = 'w')\nplot(segment.smoothed.CNA.object, plot.type = 'w')\n\n\n\n### Run BICseq analysis on BAM files ############################\nrequire(NGS.Tools.BICseq)\ntumour <- 'inst/extdata/tumor_sorted.bam'\nnormal <- 'inst/extdata/normal_sorted.bam'\ndata <- NGS.Tools.BICseq::run.bicseq.cnv.pipeline(\n  tumour=tumour,\n  normal=normal,\n  chr='chr22'\n  )\n",
+    "created" : 1401903635301.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3681826220",
+    "id" : "7F7EF042",
+    "lastKnownWriteTime" : 7926457391724393216,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 0,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

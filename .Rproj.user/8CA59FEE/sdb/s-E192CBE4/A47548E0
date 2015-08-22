@@ -1,0 +1,18 @@
+{
+    "contents" : "tumour.bam <- '/usr/local/src/bicseq/BICseq/test_data/tumor_sorted.bam'\nnormal.bam <- '/usr/local/src/bicseq/BICseq/test_data/normal_sorted.bam'\n\nbicseq <- BICseq(sample=tumour.bam, reference=normal.bam, seqNames=c('chr22'))\nsegs <- BICseq::getBICseg(object = bicseq, bin = 100, lambda = 2, winSize = 200, quant = 0.95, mult = 1)\nbins <- BICseq:::getRatios(bin(segs), what='bin')\nseg.summary <- BICseq:::getSummary(segs, correction=TRUE)\n\nplot(segs, sampleName='Demo', save=FALSE, plotBin=TRUE, chromOrder=c('chr22'))\nbicseq <- run.bicseq.cnv.pipeline(tumour=tumour.bam, normal=normal.bam, chr=c('chr22'))\n\n# create a stepplot\ndf <- data.frame(x=seq(0, 10), y=cumsum(rnorm(11)))\ndf$xend <- c(df$x[2:nrow(df)], NA)\ndf$yend <- df$y\np <- (ggplot(df, aes(x=x, y=y, xend=xend, yend=yend)) +\n        geom_vline(aes(xintercept=x), linetype=2, color=\"grey\") +\n        geom_point() +  # Solid points to left\n        geom_point(aes(x=xend, y=y), shape=1) +  # Open points to right\n        geom_segment())  # Horizontal line segments\np\n\nblah <- seg.summary[!is.infinite(seg.summary$ratio),]\nggplot(data=blah, aes(x=start, y=mean, xend=end, yend=ratio)) +\n  geom_vline(aes(xintercept=start), linetype=2, color='grey') +\n  geom_point() +\n  geom_point(aes(x=end, y=ratio), shape=1)",
+    "created" : 1440110931455.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "4084903938",
+    "id" : "A47548E0",
+    "lastKnownWriteTime" : 0,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

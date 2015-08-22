@@ -1,0 +1,17 @@
+{
+    "contents" : "Package: NGS.Tools.BICseq\nType: Package\nTitle: BICseq CNV calling pipeline\nVersion: 0.4\nDate: 2015-08-21\nAuthor: Richard de Borja\nMaintainer: Richard de Borja <richard.deborja@sickkids.ca>\nDescription: A suite of R functions to wrap the BICseq CNV calling algorithm\nLicense: GPL-2\nDepends: R (>= 3.0.2), BICseq (>= 1.2.0), DNAcopy (>= 1.36), plyr, plotting.general (>= 0.12)\n",
+    "created" : 1440167315189.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4093083198",
+    "id" : "8B9498DC",
+    "lastKnownWriteTime" : 1440167575,
+    "path" : "~/local/src/R/NGS.Tools.BICseq/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "dcf"
+}

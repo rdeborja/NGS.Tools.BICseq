@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{get.bicseq.chr}\n\\alias{get.bicseq.chr}\n\\title{Get a list of chromosomes to process using BIC-seq}\n\\description{Get a list of chromosomes to process using BIC-seq}\n\\usage{get.bicseq.chr(reftype='b37')}\n\\arguments{\n  \\item{reftype}{Reference genome type.  This determines whether the reference genome contains chrN by using reftype='ucsc'.}\n}\n\\author{Richard de Borja}\n\\examples{\nchr <- get.bicseq.chr(reftype='b37')\n}\n\\keyword{BICseq}\n\\keyword{run.bicseq.cnv.pipeline}\n",
+    "created" : 1440110911515.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3593836596",
+    "id" : "25D81333",
+    "lastKnownWriteTime" : 1425182418,
+    "path" : "~/local/src/R/NGS.Tools.BICseq/man/get.bicseq.chr.Rd",
+    "project_path" : "man/get.bicseq.chr.Rd",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

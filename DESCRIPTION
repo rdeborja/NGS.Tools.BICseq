@@ -1,0 +1,10 @@
+Package: NGS.Tools.BICseq
+Type: Package
+Title: BICseq CNV calling pipeline
+Version: 0.4
+Date: 2015-08-21
+Author: Richard de Borja
+Maintainer: Richard de Borja <richard.deborja@sickkids.ca>
+Description: A suite of R functions to wrap the BICseq CNV calling algorithm
+License: GPL-2
+Depends: R (>= 3.0.2), BICseq (>= 1.2.0), DNAcopy (>= 1.36), plyr, plotting.general (>= 0.12)

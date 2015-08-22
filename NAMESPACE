@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+
+export(
+  "run.bicseq.cnv.pipeline",
+  "get.bicseq.chr"
+  );

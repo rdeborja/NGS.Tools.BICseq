@@ -1,0 +1,17 @@
+{
+    "contents" : "exportPattern(\"^[[:alpha:]]+\")\n\nexport(\n  \"run.bicseq.cnv.pipeline\",\n  \"get.bicseq.chr\"\n  );\n",
+    "created" : 1404911471610.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1147979642",
+    "id" : "C6D5AE88",
+    "lastKnownWriteTime" : 1401890825,
+    "path" : "~/local/src/R/NGS.Tools.BICseq/NAMESPACE",
+    "project_path" : "NAMESPACE",
+    "properties" : {
+    },
+    "relative_order" : 0,
+    "source_on_save" : false,
+    "type" : "r_namespace"
+}

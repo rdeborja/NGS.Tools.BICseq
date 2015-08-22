@@ -1,0 +1,17 @@
+{
+    "contents" : "run.bicseq.cnv.pipeline <- function(tumour=NULL, normal=NULL, chr = get.bicseq.chr(), bin = 100, lambda = 2, winSize = 200, quant = 0.95, mult = 1) {\n  if (is.null(tumour)) stop(\"Mandatory argument tumour is missing\")\n  if (is.null(normal)) stop(\"Mandatory argument normal is missing\")\n  \n  bicseq <- list()\n  bicseq$object <- BICseq(\n    sample = tumour,\n    reference = normal,\n    seqNames = chr\n    );\n  segs <- BICseq::getBICseg(\n    object = bicseq$object,\n    bin = bin,\n    lambda = lambda,\n    winSize = winSize,\n    quant = quant,\n    mult = mult\n    );\n  bicseq$bins <- BICseq:::getRatios(bin(segs), what = 'bin');\n  bicseq$segs <- segs;\n  bicseq$seg.summary <- BICseq:::getSummary(segs, correction=TRUE);\n  bicseq$seg.summary$seg_length <- bicseq$seg.summary$end - bicseq$seg.summary$start + 1\n  return(bicseq);\n  }\n",
+    "created" : 1402321813776.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2029863511",
+    "id" : "F00BCF51",
+    "lastKnownWriteTime" : 1440166697,
+    "path" : "~/local/src/R/NGS.Tools.BICseq/R/run.bicseq.cnv.pipeline.R",
+    "project_path" : "R/run.bicseq.cnv.pipeline.R",
+    "properties" : {
+    },
+    "relative_order" : 0,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
